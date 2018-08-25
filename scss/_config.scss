@@ -1,0 +1,26 @@
+$primary-color: #9b92fb;
+$secondary-color: #fff;
+$tertiary-color: #a3a3a3;
+$dark-overlay: rgba(darken($primary-color, 60%), 0.5);
+$background-opacity: 0.9;
+
+
+//fonts
+$varela-round: 'Varela Round', sans-serif;
+$hind: 'Hind', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+
+@mixin easeOut {
+    transition: all 0.3s ease-out;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
