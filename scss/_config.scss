@@ -10,14 +10,15 @@ $varela-round: 'Varela Round', sans-serif;
 $hind: 'Hind', sans-serif;
 $open-sans: 'Open Sans', sans-serif;
 $montserrat: 'Montserrat', sans-serif;
-$light: 300;
 $normal: 400;
-$semibold: 500;
 $bold: 700;
+
+
 
 @mixin easeOut {
     transition: all 0.3s ease-out;
 }
+
 
 @mixin flexCenter {
     display: flex;
