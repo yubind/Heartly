@@ -1,7 +1,8 @@
 $primary-color: #9b92fb;
 $secondary-color: #fff;
 $tertiary-color: #a3a3a3;
-$dark-overlay: rgba(darken($primary-color, 60%), 0.5);
+$primary-overlay: rgba(darken($primary-color, 60%), 0.5);
+$black-overlay: rgba(darken(#f4f4f4, 60%), 0.7);
 $background-opacity: 0.9;
 
 
@@ -24,4 +25,34 @@ $bold: 700;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+
+//media query mixins
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
 }

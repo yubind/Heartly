@@ -12,20 +12,30 @@
     &:focus {
         outline: none;
     }
-}
+ }
 
 body {
     font: $normal 1em $open-sans;
     color: #51334b;
     line-height: 1.3;
     display: none;
-}
+ }
 
-
-h1, h2, h3, h4, h5 {
+h1 {
+    font-size: 4.5em;
+    font-weight: $bold;
     font-family: $hind;
-}
+ }
 
+h2 {
+    font-size: 2.5em;
+    font-family: $hind;
+ }
+
+h3 {
+    font-size: 2em;
+    font-family: $hind;
+ }
 
 hr {
         display: block;
@@ -34,7 +44,7 @@ hr {
         border-top: 1px solid #d3d3d3;
         margin: 1em 0;
         padding: 0; 
-    }
+ }
     
     
 
@@ -57,39 +67,32 @@ li {
 }
 
 
+
+
+
+
+//index 
 .top-bg {
     width: 100%;
     height: 32.5rem;
     z-index: 0;
     
     .top-bg-overlay {
-        display: block;
         width: 100%;
         height: 32.5rem;
-        background: $dark-overlay;
+        background: $primary-overlay;
         z-index: 1;
     }
 }
 
-
-
-
-
-//index 
 .top-banner {
     @include flexCenter;
     flex-direction: column;
-    position: relative;
     padding-top: 5rem;
     color: $secondary-color;
     
-    h1 {
-        font-size: 4.5em;
-        font-weight: $bold;
-    }
-    
-    h4 {
-        font-size: 2.3em;
+    h2 {
+        font-weight: $normal;
     }
     
     &-btn {
@@ -143,7 +146,6 @@ li {
             
             
             h2 {
-                font-size: 2.5em;
                 padding: 1.2rem 0;
                 color: #333333;
             }
@@ -169,8 +171,10 @@ li {
         }
         
     }
-    
 }
+
+
+
 
 
 
@@ -178,8 +182,7 @@ li {
     padding: 2rem 4rem;
     text-align: center;
     
-    h3 {
-        font-size: 2.7em;
+    h2 {
         font-weight: $normal;
     }
     
@@ -200,6 +203,15 @@ li {
         div {
            width: 33%;
            margin: 1rem;
+           
+           &.share {
+               animation-delay: .3s;
+           }
+           
+           &.follow {
+               animation-delay: .6s;
+           }
+           
             i {
                 color: $primary-color;
                 padding: 2rem;
@@ -218,8 +230,7 @@ li {
 
 
 .home-img-links {
-    display: flex;
-    justify-content: center;
+    @include flexCenter;
     margin: 4rem 0;
     
         .container {
@@ -233,34 +244,34 @@ li {
             
             
             .home-img-item {
-                position: absolute;
-                top: 0;
-                left: 0;
+                display: block;
+                vertical-align: middle;
                 
                 img {
-                    @include easeOut; 
+                    @include easeOut;
+                    max-width: 100%;
+                    max-height: 100%;
                 }
                 
                 .home-img-link-text {
-                color: $secondary-color;
-                width: 80%;
-                height: 80%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                text-align: center;
-                border: 10px solid $secondary-color;
-                transform: translate(-50%, -50%);
-                display: none;
-                
-                h2 {
-                   font-size: 2rem; 
-                }
+                    @include easeOut;
+                    color: $secondary-color;
+                    max-width: 100%;
+                    max-height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    text-align: center;
+                    border: 0px solid $secondary-color;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    white-space: nowrap;
+                    padding: 6rem 5rem;
                 }
             }
             
             &:hover {
-                box-shadow: 19px 52px 198px -31px rgba(0,0,0,0.75);
+                box-shadow: 1px 29px 67px -21px rgba(0,0,0,0.75);
                 
                 .home-img-item img {
                     transform: scale(1.2);
@@ -268,7 +279,8 @@ li {
                 }
                 
                 .home-img-link-text {
-                    display: block;
+                    opacity: 1;
+                    border: 10px solid $secondary-color;
                 }
             }
     
@@ -279,6 +291,7 @@ li {
 .testimonial-carousel {
     cursor: move; /* fallback if grab cursor is unsupported */
     cursor: grab;
+    display: block;
     
     &:active {
         cursor: grabbing;
@@ -319,10 +332,10 @@ li {
         p {
             background-color: $primary-color; 
             color: $secondary-color;
-            padding: 2rem 2rem 2rem 5rem;
+            padding: 2.5rem 2.5rem 2.5rem 5.5rem;
             border-radius: 10px;
             display: block;
-            font-size: 1.15rem;
+            font-size: 1em;
             letter-spacing: 0.5;
             text-align: left;
             outline: 0;
@@ -331,7 +344,7 @@ li {
             &:before {
                 content: open-quote;
                 font-size: 7em;
-                color: $dark-overlay;
+                color: $primary-overlay;
                 opacity: 0.4;
                 position: absolute;
                 top: -10%;
@@ -368,6 +381,11 @@ li {
             margin: 3.5rem auto 2.5rem auto;
             border-radius: 50%;
         }
+        
+        span {
+            font-weight: $bold;
+        }
+        
     }  //-----------testimonial
     
     
@@ -379,7 +397,6 @@ li {
     display: block;
     text-align: center;
     padding: 0;
-    margin: 0;
     width: 100%;
     
     li {
@@ -398,9 +415,6 @@ li {
             height: 4px;
             width: 28px;
             outline: none;
-            // // line-height: 0px;
-            // // font-size: 0px;
-            // color: transparent;
             padding: 0;
             cursor: pointer;
             
@@ -420,3 +434,211 @@ li {
 } 
 
 
+
+footer {
+    width: 100%;
+    font-family: $hind;
+    
+
+    .footer-top {
+        @include flexCenter;
+        align-items: flex-start;
+        padding: 3rem 4.5rem;
+        height: 25rem;
+        
+        div {
+            flex-grow: 1;
+            flex-basis: 0;
+            margin: 0 .5rem .5rem 0;
+            font-size: 1em;
+            
+            a {
+                color: $tertiary-color;
+                @include easeOut;
+                
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+            
+            h5 {
+                color: #1f1f1f;
+                text-transform: uppercase;
+                margin: 1.5rem 0;
+            }
+            
+            
+            &.blog {
+                
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    
+                }
+                
+                span {
+                    margin-bottom: .5rem;
+                    font-size: .8em;
+                }
+            }
+            
+            &.trending {
+
+                &-icons {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    white-space: nowrap;
+                    
+                    a {
+                        color: $secondary-color;
+                        background-color: #1f1f1f;
+                        font-size: .7em;
+                        margin: .1rem 0 0 .1rem;
+                        padding: .5rem;
+                        
+                        &:hover {
+                            background-color: $primary-color;
+                        }
+                    }
+                }
+            }
+            
+            &.site-map {
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    a {
+                        margin: .5rem 0;
+                    }
+                }
+            }
+        }
+    }
+    
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4rem;
+        background-color: #1f1f1f;
+        font-size: .7em;
+        color: $tertiary-color;
+        
+        p {
+            margin-left: 4rem;
+        }
+        
+        .footer-icons {
+            margin-right: 4rem;
+            font-size: 1rem;
+            
+            a {
+                margin: .7rem;
+                @include easeOut;
+                
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+.bottom-bg {
+    margin: 5rem 0 1rem 0;
+    width: 100%;
+    height: 28rem;
+    z-index: 0;
+    background-size: cover;
+
+    
+    .bottom-bg-overlay {
+        width: 100%;
+        height: 28rem;
+        background: $black-overlay;
+        z-index: 1;
+        @include flexCenter;
+        
+        
+        .bottom-contact {
+            color: $secondary-color;
+            text-align: center;
+            @include flexCenter;
+            flex-direction: column;
+            
+            .contact-btn {
+                padding: .8rem 2.5rem;
+                margin-top: 3rem;
+                border: 2px solid $secondary-color;
+                border-radius: 30px;
+                text-transform: uppercase;
+                font-size: .8em;
+                font-weight: $bold;
+                letter-spacing: 2px;
+                
+                &:hover {
+                    border: 2px solid $primary-color;
+                    background-color: $primary-color;
+                    @include easeOut;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+//about
+
+.about-top-bg {
+    height: 35rem;
+}
+
+.about-top-content {
+    @include flexCenter;
+    flex-direction: column;
+    margin-top: 7rem;
+    color: $secondary-color;
+    
+    
+    h3 {
+        font-weight: $normal;
+    }
+}
+
+.about-indicator {
+  height: 4.5rem;  
+  background-color: #111;
+  width: 100%;
+  @include flexCenter;
+  
+      a {
+        margin: .8rem;
+        color: $tertiary-color;
+        font-family: $varela-round;
+        @include easeOut;
+         
+         &:hover {
+             color: $secondary-color;
+         }
+      }
+}
+
+.sticky {
+    position:fixed;
+    top:0;
+    width:100%;
+}
+
+
+.introduction {
+    height: 32rem;
+}

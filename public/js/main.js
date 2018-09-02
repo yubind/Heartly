@@ -1,22 +1,36 @@
 $( document ).ready(function() {
-  $('body').css('display', 'block');  
-  
-  $(window).on('scroll', function() {
-    if($(this).scrollTop() > 100) {
-      $('.second-banner-content').addClass('animated fadeInUp slow');
-      $('.second-banner-img').addClass('animated fadeInUp slow');
-    }
-  });
-  
-  $(window).on('scroll', function() {
-    if($(this).scrollTop() > 300) {
-      $('.third-banner-content').addClass('animated fadeIn slow');
-    }
-  });
-  
+  $('body').css('display', 'block');
+  $('.second-banner-description').css('opacity', 0);
+  $('.second-banner-img').css('opacity', 0);
+  $('.home-img-links .container').css('opacity', 0);
+  $('.kindness').css('opacity', 0);
 
-
-    
+  ////index
+  //second banner fadeinup
+  $('.second-banner').waypoint(function() {
+    $('.second-banner-description').addClass('fadeIn');
+  }, { offset: '90%'});
+  $('.second-banner').waypoint(function() {
+    $('.second-banner-img').addClass('fadeInUp');
+  }, { offset: '85%'});
+  
+  //third banner fadein
+  $('.kindness').waypoint(function() {
+    $('.kindness').addClass('fadeIn');
+  }, { offset: '100%'});
+  $('.share').waypoint(function() {
+    $('.share').addClass('fadeIn');
+  }, { offset: '100%'});
+  $('.follow').waypoint(function() {
+    $('.follow').addClass('fadeIn');
+  }, { offset: '100%'});
+  
+  //img links fade in up
+  $('.home-img-links').waypoint(function() {
+    $('.home-img-links .container').addClass('fadeInUp');
+  }, { offset: '100%'});
+  
+  //testimonials slick slider  
   $('.testimonial-carousel').slick({
     centerMode: true,
     centerPadding: '20px',
@@ -33,7 +47,7 @@ $( document ).ready(function() {
         settings: {
           centerMode: true,
           centerPadding: '20px',
-          slidesToShow: 3
+          slidesToShow: 1
         }
       },
       {
@@ -46,4 +60,9 @@ $( document ).ready(function() {
       }
     ]
   });
+  
+  ////about
+  $('.about-indicator').waypoint(function() {
+     $('.about-indicator').toggleClass('sticky'); 
+  }, { offset: '0%'});
 });
