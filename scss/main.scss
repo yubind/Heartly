@@ -37,6 +37,17 @@ h3 {
     font-family: $hind;
  }
 
+h4 {
+    font-size: 1.2em;
+    font-family: $hind;
+ }
+ 
+ 
+h5 {
+    font-family: $varela-round;
+    text-transform: uppercase;
+ }
+
 hr {
         display: block;
         height: 1px;
@@ -62,11 +73,14 @@ p {
     line-height: 2;
 }
 
-li {
+ul, li {
     list-style: none;
 }
 
-
+.animated {
+    animation-duration: .8s;
+    animation-delay: .2s;
+}
 
 
 
@@ -85,17 +99,18 @@ li {
     }
 }
 
-.top-banner {
+
+.top {
     @include flexCenter;
     flex-direction: column;
     padding-top: 5rem;
     color: $secondary-color;
     
-    h2 {
+    &-sm-header {
         font-weight: $normal;
     }
     
-    &-btn {
+    &-btn-container {
         display: flex;
         color: $primary-color;
         margin-top: 1rem;
@@ -105,7 +120,7 @@ li {
         text-transform: uppercase;
         letter-spacing: 2px;
         
-        div {
+        .top-btn {
             background: $secondary-color;
             margin: .6rem .4rem;
             padding: .8rem 1.5rem;
@@ -124,15 +139,13 @@ li {
 
 
 
-.second-banner {
+.what {
     padding: 4rem 6rem;
     background: #f9f9f9;
     
-    h5 {
+    &-header {
         text-align: center;
-        font: $bold 1em $montserrat;
         color: $primary-color;
-        text-transform: uppercase;
         letter-spacing: 8px;
         padding: 1rem;
     }
@@ -140,29 +153,25 @@ li {
     
     &-content {
         display: flex;
-        justify-content: space-around;
         
-        .second-banner-description {
-            
-            
-            h2 {
+        .what-content-container {
+            .what-content-header {
                 padding: 1.2rem 0;
                 color: #333333;
             }
             
-            h6 {
-                color: $primary-color;
-                font-size: .9em;
+            .who-header {
+                // text-align: left;
                 letter-spacing: 2px;
-                font-family: $montserrat;
-                text-transform: uppercase;
-                margin: 2rem 0 1rem 0;
+                padding: 2rem 0 .5rem 0;
+                color: $primary-color;
             }
            
         }
         
-        .second-banner-img {
-            img {
+        .what-img-container {
+            
+            .what-img {
               display: inline-block;
               width: 35rem;
               height: auto;
@@ -177,22 +186,15 @@ li {
 
 
 
-
-.third-banner {
+.how {
     padding: 2rem 4rem;
     text-align: center;
     
-    h2 {
+    &-lg-header {
         font-weight: $normal;
     }
     
-    h5 {
-        font-size: 1.3em;
-        color: $tertiary-color;
-        font-weight: $normal;
-    }
-    
-    p {
+    &-p {
         color: $tertiary-color;
     }
     
@@ -200,28 +202,32 @@ li {
         display: flex;
         padding: 0 4rem;
         
-        div {
+        .how-content-container {
            width: 33%;
            margin: 1rem;
            
-           &.share {
-               animation-delay: .3s;
-           }
-           
-           &.follow {
-               animation-delay: .6s;
-           }
-           
-            i {
-                color: $primary-color;
-                padding: 2rem;
-            }
-            
-            h4 {
-                font-size: 1.4em;
-                font-weight: $normal;
-                margin-bottom: .3em;
-            }
+               &.share {
+                   animation-delay: .3s;
+               }
+               
+               &.follow {
+                   animation-delay: .6s;
+               }
+               
+                .how-icon {
+                    color: $primary-color;
+                    padding: 2rem;
+                }
+                
+                .how-sm-header {
+                    font-size: 1.4em;
+                    font-weight: $normal;
+                    margin-bottom: .3em;
+                }
+                
+                .how-sm-p {
+                    color: $tertiary-color;
+                }
         }
     }
     
@@ -435,6 +441,56 @@ li {
 
 
 
+.bottom-bg {
+    margin: 5rem 0 1rem 0;
+    width: 100%;
+    height: 28rem;
+    z-index: 0;
+    background-size: cover;
+
+    
+    .bottom-bg-overlay {
+        width: 100%;
+        height: 28rem;
+        background: $black-overlay;
+        z-index: 1;
+        @include flexCenter;
+        
+        
+        .bottom-contact {
+            color: $secondary-color;
+            text-align: center;
+            @include flexCenter;
+            flex-direction: column;
+            
+            h3 {
+                @include textShadow;
+            }
+            .contact-btn {
+                padding: .8rem 2.5rem;
+                margin-top: 3rem;
+                border: 2px solid $secondary-color;
+                border-radius: 30px;
+                text-transform: uppercase;
+                font-size: .8em;
+                font-weight: $bold;
+                letter-spacing: 2px;
+                
+                &:hover {
+                    border: 2px solid $primary-color;
+                    background-color: $primary-color;
+                    @include easeOut;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
 footer {
     width: 100%;
     font-family: $hind;
@@ -549,48 +605,6 @@ footer {
 
 
 
-.bottom-bg {
-    margin: 5rem 0 1rem 0;
-    width: 100%;
-    height: 28rem;
-    z-index: 0;
-    background-size: cover;
-
-    
-    .bottom-bg-overlay {
-        width: 100%;
-        height: 28rem;
-        background: $black-overlay;
-        z-index: 1;
-        @include flexCenter;
-        
-        
-        .bottom-contact {
-            color: $secondary-color;
-            text-align: center;
-            @include flexCenter;
-            flex-direction: column;
-            
-            .contact-btn {
-                padding: .8rem 2.5rem;
-                margin-top: 3rem;
-                border: 2px solid $secondary-color;
-                border-radius: 30px;
-                text-transform: uppercase;
-                font-size: .8em;
-                font-weight: $bold;
-                letter-spacing: 2px;
-                
-                &:hover {
-                    border: 2px solid $primary-color;
-                    background-color: $primary-color;
-                    @include easeOut;
-                }
-            }
-        }
-    }
-}
-
 
 
 
@@ -608,16 +622,23 @@ footer {
     margin-top: 7rem;
     color: $secondary-color;
     
+    h1 {
+        @include textShadow;
+    }
     
     h3 {
         font-weight: $normal;
     }
 }
 
-.about-indicator {
+
+
+//about page sticky menu
+#about-indicator {
   height: 4.5rem;  
   background-color: #111;
   width: 100%;
+  z-index: 1;
   @include flexCenter;
   
       a {
@@ -639,6 +660,175 @@ footer {
 }
 
 
-.introduction {
+
+//introduction
+#introduction {
     height: 32rem;
+    width: 100%;
+    height: 45rem;
+    z-index: 0;
+    background-size: cover;
+    
+    .intro-overlay {
+        height: 32rem;
+        width: 100%;
+        height: 45rem;
+        background: $black-overlay;
+        z-index: 1;
+        
+        .intro-content {
+            width: 100%;
+            height: 45rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: $secondary-color;
+            padding: 0 0 3.5rem 4rem;
+
+            h2 {
+                font-weight: $normal;
+                margin-bottom: 1rem;
+                @include textShadow;
+            }
+        }
+    }
 }
+
+
+
+//team
+#team {
+    max-width: 100%;
+    margin: 0 2rem;
+    
+    .team-sm-header {
+        margin-top: 3rem;
+        letter-spacing: 2px;
+        text-align: center;
+        color: $primary-color;
+    }
+    
+    .team-lg-header {
+        text-align: center;
+        font-weight: $normal;
+        margin-bottom: 2rem;
+    }
+    
+    .team-img-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 5rem;
+        
+        .team-item {
+            margin: 1%;
+            box-sizing: border-box;
+            position: relative;
+            height: 350px;
+            background-color: #000;
+            
+            img {
+              width: 350px;
+              height: 350px;
+              position: relative;
+              @include easeOut;
+            }
+            
+            .team-img-caption-container {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                padding: 0 0 1rem 1rem;
+                color: $secondary-color;
+                line-height: .5;
+                opacity: 0;
+                @include easeOut;
+            }
+            
+            
+            &:hover {
+                
+                img {
+                    opacity: 0.5;
+                }
+                
+                .team-img-caption-container {
+                    opacity: 1;
+                }
+            }
+                
+        }
+    }
+    
+    .team-content-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 35rem;
+        margin: 3rem;
+        
+        * {
+            margin-bottom: 1rem;
+        }
+        
+        .team-content-lg-header {
+            color: $primary-color;
+            font-weight: $normal;
+        }
+        
+        
+        .team-content-sm {
+            margin-top: 1rem;
+            
+            &-header {
+                color: $primary-color;
+            }
+            
+            &-p {
+                color: $tertiary-color;
+            }
+            
+            span {
+                color: $primary-color;
+                cursor: pointer;
+            }
+        }
+        
+        .team-social {
+            
+            &-header {
+                font-weight: $normal;
+            }
+            
+            &-link {
+                margin-top: .5rem;
+                color: $primary-color;
+                @include easeOut;
+                
+                &:hover {
+                    color: $tertiary-color;
+                }
+            }
+        }
+        
+        .team-news {
+            
+            &-header {
+                font-weight: $normal;
+            }
+            
+            &-link {
+                margin-top: .5rem;
+                color: $primary-color;
+                @include easeOut;
+                
+                &:hover {
+                    color: $tertiary-color;
+                }
+            }
+        }
+    }
+}
+

@@ -195,6 +195,14 @@ h3 {
   font-size: 2em;
   font-family: "Hind", sans-serif; }
 
+h4 {
+  font-size: 1.2em;
+  font-family: "Hind", sans-serif; }
+
+h5 {
+  font-family: "Varela Round", sans-serif;
+  text-transform: uppercase; }
+
 hr {
   display: block;
   height: 1px;
@@ -213,8 +221,12 @@ p {
   font-family: "Varela Round", sans-serif;
   line-height: 2; }
 
-li {
+ul, li {
   list-style: none; }
+
+.animated {
+  animation-duration: .8s;
+  animation-delay: .2s; }
 
 .top-bg {
   width: 100%;
@@ -226,16 +238,16 @@ li {
     background: rgba(10, 3, 88, 0.5);
     z-index: 1; }
 
-.top-banner {
+.top {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding-top: 5rem;
   color: #fff; }
-  .top-banner h2 {
+  .top-sm-header {
     font-weight: 400; }
-  .top-banner-btn {
+  .top-btn-container {
     display: flex;
     color: #9b92fb;
     margin-top: 1rem;
@@ -244,74 +256,66 @@ li {
     font-size: .7em;
     text-transform: uppercase;
     letter-spacing: 2px; }
-    .top-banner-btn div {
+    .top-btn-container .top-btn {
       background: #fff;
       margin: .6rem .4rem;
       padding: .8rem 1.5rem;
       border-radius: 35px; }
-      .top-banner-btn div:hover {
+      .top-btn-container .top-btn:hover {
         cursor: pointer;
         background: #9b92fb;
         color: #fff;
         transition: all 0.3s ease-out; }
 
-.second-banner {
+.what {
   padding: 4rem 6rem;
   background: #f9f9f9; }
-  .second-banner h5 {
+  .what-header {
     text-align: center;
-    font: 700 1em "Montserrat", sans-serif;
     color: #9b92fb;
-    text-transform: uppercase;
     letter-spacing: 8px;
     padding: 1rem; }
-  .second-banner-content {
-    display: flex;
-    justify-content: space-around; }
-    .second-banner-content .second-banner-description h2 {
+  .what-content {
+    display: flex; }
+    .what-content .what-content-container .what-content-header {
       padding: 1.2rem 0;
       color: #333333; }
-    .second-banner-content .second-banner-description h6 {
-      color: #9b92fb;
-      font-size: .9em;
+    .what-content .what-content-container .who-header {
       letter-spacing: 2px;
-      font-family: "Montserrat", sans-serif;
-      text-transform: uppercase;
-      margin: 2rem 0 1rem 0; }
-    .second-banner-content .second-banner-img img {
+      padding: 2rem 0 .5rem 0;
+      color: #9b92fb; }
+    .what-content .what-img-container .what-img {
       display: inline-block;
       width: 35rem;
       height: auto;
       margin: 1.5rem; }
 
-.third-banner {
+.how {
   padding: 2rem 4rem;
   text-align: center; }
-  .third-banner h2 {
+  .how-lg-header {
     font-weight: 400; }
-  .third-banner h5 {
-    font-size: 1.3em;
-    color: #a3a3a3;
-    font-weight: 400; }
-  .third-banner p {
+  .how-p {
     color: #a3a3a3; }
-  .third-banner-content {
+  .how-content {
     display: flex;
     padding: 0 4rem; }
-    .third-banner-content div {
+    .how-content .how-content-container {
       width: 33%;
       margin: 1rem; }
-      .third-banner-content div.share {
+      .how-content .how-content-container.share {
         animation-delay: .3s; }
-      .third-banner-content div.follow {
+      .how-content .how-content-container.follow {
         animation-delay: .6s; }
-      .third-banner-content div i {
+      .how-content .how-content-container .how-icon {
         color: #9b92fb;
         padding: 2rem; }
-      .third-banner-content div h4 {
+      .how-content .how-content-container .how-sm-header {
         font-size: 1.4em;
         font-weight: 400;
         margin-bottom: .3em; }
+      .how-content .how-content-container .how-sm-p {
+        color: #a3a3a3; }
 
 .home-img-links {
   display: flex;
@@ -453,6 +457,43 @@ li {
       .testimonial-carousel .slick-dots li.slick-active button {
         background: #9b92fb; }
 
+.bottom-bg {
+  margin: 5rem 0 1rem 0;
+  width: 100%;
+  height: 28rem;
+  z-index: 0;
+  background-size: cover; }
+  .bottom-bg .bottom-bg-overlay {
+    width: 100%;
+    height: 28rem;
+    background: rgba(91, 91, 91, 0.5);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .bottom-bg .bottom-bg-overlay .bottom-contact {
+      color: #fff;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .bottom-bg .bottom-bg-overlay .bottom-contact h3 {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
+      .bottom-bg .bottom-bg-overlay .bottom-contact .contact-btn {
+        padding: .8rem 2.5rem;
+        margin-top: 3rem;
+        border: 2px solid #fff;
+        border-radius: 30px;
+        text-transform: uppercase;
+        font-size: .8em;
+        font-weight: 700;
+        letter-spacing: 2px; }
+        .bottom-bg .bottom-bg-overlay .bottom-contact .contact-btn:hover {
+          border: 2px solid #9b92fb;
+          background-color: #9b92fb;
+          transition: all 0.3s ease-out; }
+
 footer {
   width: 100%;
   font-family: "Hind", sans-serif; }
@@ -520,41 +561,6 @@ footer {
         footer .footer-bottom .footer-icons a:hover {
           color: #9b92fb; }
 
-.bottom-bg {
-  margin: 5rem 0 1rem 0;
-  width: 100%;
-  height: 28rem;
-  z-index: 0;
-  background-size: cover; }
-  .bottom-bg .bottom-bg-overlay {
-    width: 100%;
-    height: 28rem;
-    background: rgba(91, 91, 91, 0.7);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .bottom-bg .bottom-bg-overlay .bottom-contact {
-      color: #fff;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column; }
-      .bottom-bg .bottom-bg-overlay .bottom-contact .contact-btn {
-        padding: .8rem 2.5rem;
-        margin-top: 3rem;
-        border: 2px solid #fff;
-        border-radius: 30px;
-        text-transform: uppercase;
-        font-size: .8em;
-        font-weight: 700;
-        letter-spacing: 2px; }
-        .bottom-bg .bottom-bg-overlay .bottom-contact .contact-btn:hover {
-          border: 2px solid #9b92fb;
-          background-color: #9b92fb;
-          transition: all 0.3s ease-out; }
-
 .about-top-bg {
   height: 35rem; }
 
@@ -565,22 +571,25 @@ footer {
   flex-direction: column;
   margin-top: 7rem;
   color: #fff; }
+  .about-top-content h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
   .about-top-content h3 {
     font-weight: 400; }
 
-.about-indicator {
+#about-indicator {
   height: 4.5rem;
   background-color: #111;
   width: 100%;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .about-indicator a {
+  #about-indicator a {
     margin: .8rem;
     color: #a3a3a3;
     font-family: "Varela Round", sans-serif;
     transition: all 0.3s ease-out; }
-    .about-indicator a:hover {
+    #about-indicator a:hover {
       color: #fff; }
 
 .sticky {
@@ -588,5 +597,107 @@ footer {
   top: 0;
   width: 100%; }
 
-.introduction {
-  height: 32rem; }
+#introduction {
+  height: 32rem;
+  width: 100%;
+  height: 45rem;
+  z-index: 0;
+  background-size: cover; }
+  #introduction .intro-overlay {
+    height: 32rem;
+    width: 100%;
+    height: 45rem;
+    background: rgba(91, 91, 91, 0.5);
+    z-index: 1; }
+    #introduction .intro-overlay .intro-content {
+      width: 100%;
+      height: 45rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: #fff;
+      padding: 0 0 3.5rem 4rem; }
+      #introduction .intro-overlay .intro-content h2 {
+        font-weight: 400;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
+
+#team {
+  max-width: 100%;
+  margin: 0 2rem; }
+  #team .team-sm-header {
+    margin-top: 3rem;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #9b92fb; }
+  #team .team-lg-header {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 2rem; }
+  #team .team-img-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 5rem; }
+    #team .team-img-container .team-item {
+      margin: 1%;
+      box-sizing: border-box;
+      position: relative;
+      height: 350px;
+      background-color: #000; }
+      #team .team-img-container .team-item img {
+        width: 350px;
+        height: 350px;
+        position: relative;
+        transition: all 0.3s ease-out; }
+      #team .team-img-container .team-item .team-img-caption-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        padding: 0 0 1rem 1rem;
+        color: #fff;
+        line-height: .5;
+        opacity: 0;
+        transition: all 0.3s ease-out; }
+      #team .team-img-container .team-item:hover img {
+        opacity: 0.5; }
+      #team .team-img-container .team-item:hover .team-img-caption-container {
+        opacity: 1; }
+  #team .team-content-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 35rem;
+    margin: 3rem; }
+    #team .team-content-container * {
+      margin-bottom: 1rem; }
+    #team .team-content-container .team-content-lg-header {
+      color: #9b92fb;
+      font-weight: 400; }
+    #team .team-content-container .team-content-sm {
+      margin-top: 1rem; }
+      #team .team-content-container .team-content-sm-header {
+        color: #9b92fb; }
+      #team .team-content-container .team-content-sm-p {
+        color: #a3a3a3; }
+      #team .team-content-container .team-content-sm span {
+        color: #9b92fb;
+        cursor: pointer; }
+    #team .team-content-container .team-social-header {
+      font-weight: 400; }
+    #team .team-content-container .team-social-link {
+      margin-top: .5rem;
+      color: #9b92fb;
+      transition: all 0.3s ease-out; }
+      #team .team-content-container .team-social-link:hover {
+        color: #a3a3a3; }
+    #team .team-content-container .team-news-header {
+      font-weight: 400; }
+    #team .team-content-container .team-news-link {
+      margin-top: .5rem;
+      color: #9b92fb;
+      transition: all 0.3s ease-out; }
+      #team .team-content-container .team-news-link:hover {
+        color: #a3a3a3; }

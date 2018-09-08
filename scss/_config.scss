@@ -2,7 +2,7 @@ $primary-color: #9b92fb;
 $secondary-color: #fff;
 $tertiary-color: #a3a3a3;
 $primary-overlay: rgba(darken($primary-color, 60%), 0.5);
-$black-overlay: rgba(darken(#f4f4f4, 60%), 0.7);
+$black-overlay: rgba(darken(#f4f4f4, 60%), 0.5);
 $background-opacity: 0.9;
 
 
@@ -27,7 +27,9 @@ $bold: 700;
     align-items: center;
 }
 
-
+@mixin textShadow {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 
 
 //media query mixins

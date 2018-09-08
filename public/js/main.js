@@ -1,34 +1,41 @@
 $( document ).ready(function() {
   $('body').css('display', 'block');
-  $('.second-banner-description').css('opacity', 0);
-  $('.second-banner-img').css('opacity', 0);
-  $('.home-img-links .container').css('opacity', 0);
+  $('.what-content-container').css('opacity', 0);
+  $('.what-img-container').css('opacity', 0);
   $('.kindness').css('opacity', 0);
+  $('.home-img-links .container').css('opacity', 0);
+  $('.intro-content').css('opacity', 0);
 
   ////index
-  //second banner fadeinup
-  $('.second-banner').waypoint(function() {
-    $('.second-banner-description').addClass('fadeIn');
+  //what fade in 
+  $('.what').waypoint(function() {
+    $('.what-content-container').addClass('fadeIn');
   }, { offset: '90%'});
-  $('.second-banner').waypoint(function() {
-    $('.second-banner-img').addClass('fadeInUp');
+  
+  $('.what').waypoint(function() {
+    $('.what-img-container').addClass('fadeInUp');
   }, { offset: '85%'});
   
-  //third banner fadein
+  
+  //how fade in 
   $('.kindness').waypoint(function() {
     $('.kindness').addClass('fadeIn');
   }, { offset: '100%'});
+  
   $('.share').waypoint(function() {
     $('.share').addClass('fadeIn');
   }, { offset: '100%'});
+  
   $('.follow').waypoint(function() {
     $('.follow').addClass('fadeIn');
   }, { offset: '100%'});
   
+  
   //img links fade in up
   $('.home-img-links').waypoint(function() {
     $('.home-img-links .container').addClass('fadeInUp');
-  }, { offset: '100%'});
+  }, { offset: '80%'});
+  
   
   //testimonials slick slider  
   $('.testimonial-carousel').slick({
@@ -61,8 +68,27 @@ $( document ).ready(function() {
     ]
   });
   
-  ////about
-  $('.about-indicator').waypoint(function() {
-     $('.about-indicator').toggleClass('sticky'); 
+////about
+  //sticky-indicator
+  $('#about-indicator').waypoint(function() {
+     $('#about-indicator').toggleClass('sticky'); 
   }, { offset: '0%'});
+  
+  $('#introduction').waypoint(function() {
+     $('.intro-content').addClass('fadeInLeft'); 
+  }, { offset: '100%'});
+  
+  
+  //scroll to element 
+  $('a[href^="#"]').on('click', function(e) {
+    
+    var target = $(this.getAttribute('href'));
+    
+    if( target.length ) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+  });
 });
