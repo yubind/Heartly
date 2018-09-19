@@ -15,12 +15,6 @@ $normal: 400;
 $bold: 700;
 
 
-
-@mixin easeOut {
-    transition: all 0.3s ease-out;
-}
-
-
 @mixin flexCenter {
     display: flex;
     justify-content: center;
@@ -57,4 +51,29 @@ $bold: 700;
     @media screen and (min-width: 1171px) {
         @content;
     }
+}
+
+
+
+
+//animations
+@mixin easeOut {
+    transition: all 0.3s ease-out;
+}
+
+
+@keyframes fadeInUp {
+    0% { 
+        opacity: 0;
+        transform: translate3d(0, 70%, 0);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: tranlate3d(0, 0, 0);
+    }
+}
+
+.fadeinup {
+    animation: 1.5s forwards fadeInUp;
 }

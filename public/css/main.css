@@ -1,4 +1,15 @@
 @charset "UTF-8";
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 70%, 0); }
+  100% {
+    opacity: 1;
+    transform: tranlate3d(0, 0, 0); } }
+
+.fadeinup {
+  animation: 1.5s forwards fadeInUp; }
+
 header .menu {
   display: flex;
   justify-content: space-between;
@@ -38,6 +49,17 @@ header .menu {
         height: 2px;
         background: #fff;
         margin-top: 4px; }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 70%, 0); }
+  100% {
+    opacity: 1;
+    transform: tranlate3d(0, 0, 0); } }
+
+.fadeinup {
+  animation: 1.5s forwards fadeInUp; }
 
 /* Slider */
 .slick-loading .slick-list {
@@ -224,10 +246,6 @@ p {
 ul, li {
   list-style: none; }
 
-.animated {
-  animation-duration: .8s;
-  animation-delay: .2s; }
-
 .top-bg {
   width: 100%;
   height: 32.5rem;
@@ -245,6 +263,8 @@ ul, li {
   flex-direction: column;
   padding-top: 5rem;
   color: #fff; }
+  .top * {
+    animation: fadeInUp 1.5s; }
   .top-sm-header {
     font-weight: 400; }
   .top-btn-container {
@@ -269,26 +289,29 @@ ul, li {
 
 .what {
   padding: 4rem 6rem;
-  background: #f9f9f9; }
+  background-color: #f9f9f9; }
   .what-header {
     text-align: center;
     color: #9b92fb;
     letter-spacing: 8px;
     padding: 1rem; }
-  .what-content {
+  .what-container {
     display: flex; }
-    .what-content .what-content-container .what-content-header {
+    .what-container .what-content-container .what-content-header {
       padding: 1.2rem 0;
       color: #333333; }
-    .what-content .what-content-container .who-header {
+    .what-container .what-content-container .who-header {
+      text-align: left;
       letter-spacing: 2px;
       padding: 2rem 0 .5rem 0;
       color: #9b92fb; }
-    .what-content .what-img-container .what-img {
-      display: inline-block;
-      width: 35rem;
-      height: auto;
-      margin: 1.5rem; }
+    .what-container .what-img-container {
+      animation-delay: 0.3s; }
+      .what-container .what-img-container .what-img {
+        display: inline-block;
+        width: 35rem;
+        height: auto;
+        margin: 1.5rem; }
 
 .how {
   padding: 2rem 4rem;
@@ -304,9 +327,9 @@ ul, li {
       width: 33%;
       margin: 1rem; }
       .how-content .how-content-container.share {
-        animation-delay: .3s; }
+        animation-delay: .2s; }
       .how-content .how-content-container.follow {
-        animation-delay: .6s; }
+        animation-delay: .4s; }
       .how-content .how-content-container .how-icon {
         color: #9b92fb;
         padding: 2rem; }
@@ -574,9 +597,10 @@ footer {
   .about-top-content h1 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
   .about-top-content h3 {
-    font-weight: 400; }
+    font-weight: 400;
+    animation-delay: .3s; }
 
-#about-indicator {
+#about-nav {
   height: 4.5rem;
   background-color: #111;
   width: 100%;
@@ -584,27 +608,27 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center; }
-  #about-indicator a {
+  #about-nav li {
     margin: .8rem;
     color: #a3a3a3;
     font-family: "Varela Round", sans-serif;
     transition: all 0.3s ease-out; }
-    #about-indicator a:hover {
+    #about-nav li:hover {
       color: #fff; }
 
-.sticky {
+.stuck {
   position: fixed;
-  top: 0;
-  width: 100%; }
+  top: 0; }
+
+.current {
+  color: #fff !important; }
 
 #introduction {
-  height: 32rem;
   width: 100%;
   height: 45rem;
   z-index: 0;
   background-size: cover; }
   #introduction .intro-overlay {
-    height: 32rem;
     width: 100%;
     height: 45rem;
     background: rgba(91, 91, 91, 0.5);
@@ -701,3 +725,12 @@ footer {
       transition: all 0.3s ease-out; }
       #team .team-content-container .team-news-link:hover {
         color: #a3a3a3; }
+
+.news-top-bg {
+  height: 28rem;
+  background-size: cover; }
+  .news-top-bg .news-top-header {
+    margin: 6rem 0rem 3rem 6rem;
+    color: #fff;
+    opacity: .8;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
