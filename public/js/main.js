@@ -41,7 +41,7 @@ $( document ).ready(function() {
   
   
 ////about
-  //sticky-indicator
+  //sticky-nav
   var sticky = new Waypoint.Sticky({
     element: $('#about-nav')[0]
   });
@@ -51,7 +51,7 @@ $( document ).ready(function() {
   }, { offset: '100%'});
   
   
-  //scroll to div animation 
+  //scroll animation 
   $('a[href^="#"]').on('click', function(e) {
     var target = $(this.getAttribute('href'));
     
@@ -64,7 +64,7 @@ $( document ).ready(function() {
   });
     
    
-   //highlight about menu
+   //highlight about page nav
    $(window).scroll(function() {
     var position  = window.pageYOffset;
 
@@ -81,29 +81,9 @@ $( document ).ready(function() {
     });
    });
   
-  // //highlight links
-  // var last = null;
   
-  // function WaypointRelay(next) {
-  //   next = '#' + next;
-  //   if (last)
-  //       $(last).removeClass('current');
-  //       $(next).addClass('current');
-  //       last = next;
-  //   }
   
-  //   var $navLinks = $('#about-nav > li > a'); 
-
-  //     $navLinks.each(function() {
-  //       var $self = $(this);
-
-  //       $(this).waypoint({
-  //           handler: function(direction) {
-  //             WaypointRelay(this.element.id);
-  //         }
-  //     });
-  //   });
-
+  
   
   
 });

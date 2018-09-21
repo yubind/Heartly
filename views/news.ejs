@@ -41,8 +41,15 @@
  <div class="news-top">
     <h1 class="news-top-header fadeinup-animate">Spread your kindness</h1>
  </div>
- 
- </div>
+</div>
+
+<div>
+    <% for(var i = 0; i < data.articles.length; i++) {  %>
+        <img src="<%- data.articles[i].urlToImage %>"/>
+        <h3><%- data.articles[i].title %></h3>
+        <p><%- data.articles[i].content %></p>
+    <% } %>
+</div>
 
 
 
