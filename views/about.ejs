@@ -2,41 +2,27 @@
 
 
 <div class="about-top-bg" style="background-image: url(/img/team-heartly.jpg);">
-    <header>
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-        </div>
-        
-        <nav class="menu">
-            <div class="menu-brand">
-                <a href="/">Heartly</a>
-            </div>
-            <ul class="menu-nav">
-                <li class="nav-item">
-                    <a href="/" class="nav-link">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item current">
-                    <a href="/about" class="nav-link">
-                        About
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/news" class="nav-link">
-                        News
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/contact" class="nav-link">
-                        Contact
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
+    <header class="menu">
+         <h3 class="menu-brand"><a href="/">Heartly</a></h3>
+         <label for="toggle">&#9776;</label>
+         <input type="checkbox" id="toggle"/>
+         <ul class="menu-nav">
+             <li class="nav-item">
+                 <a href="/" class="nav-link">
+                    Home
+                 </a>
+             </li>
+             <li class="nav-item">
+                 <a href="/about" class="nav-link">
+                    About
+                 </a>
+             </li>
+             <li class="nav-item">
+                 <a href="/contact" class="nav-link">
+                    Contact
+                 </a>
+             </li>
+         </ul>
     </header>
     <div class="about-top-content">
         <h1 class="fadeinup-animate">We Are Team Heartly!</h1>
@@ -54,11 +40,11 @@
 <div id="introduction" class="section" style="background-image: url(/img/intro.jpg);">
 <div class="intro-overlay">
     <div class="intro-content animated">
-        <h2>Create your story<br/>
-            of kindness and share<br/>
+        <h2 class="fadeinup-animate">Create your story
+            of kindness and share
             it with Heartly</h2>
-        <p>Heartly was founded on the ideal of inspiring goodwill. We want to give<br/> 
-            everyone a focused avenue for doing good deeds, and to use those deeds <br/>
+        <p class="fadeinup-animate">Heartly was founded on the ideal of inspiring goodwill. We want to give 
+            everyone a focused avenue for doing good deeds, and to use those deeds
             to inspire others; to extend the impact of kindness by paying it forward.</p>
     </div>
 </div>
@@ -108,19 +94,18 @@
     
     <div class="team-content-container">
         <h2 class="team-content-lg-header">
-            We created Heartly<br/>
-            to allow kindness<br/>
+            We created Heartly
+            to allow kindness
             to grow from one good Deed.</h2>
         <p class="team-content-p">
-            We are a crazy group of programmers, designers, marketers, and<br/> philanthropists all united by the same vision: to create a network <br/> where people are connected by the good happening around them.<br/> With Heartly, we hope to bring that vision to life, so that you can <br/>breathe life into yours.</p>
+            We are a crazy group of programmers, designers, marketers, and philanthropists all united by the same vision: to create a network  where people are connected by the good happening around them. With Heartly, we hope to bring that vision to life, so that you can breathe life into yours.</p>
         <div class="team-content-sm">
             <h5 class="team-content-sm-header">how to get started</h5>
-            <p class="team-content-sm-p">The best way to get started is to download the Heartly app, <br/> available for <span>iOS</span> and <span>Android</span></p>
+            <p class="team-content-sm-p">The best way to get started is to download the Heartly app, available for <span>iOS</span>and <span>Android</span></p>
         </div>
         <div class="team-social">
             <h4 class="team-social-header">Search #goHeartly on social…</h4>
-            <li class="team-social-link"><a href="https://www.facebook.com/
-">Facebook</a></li>
+            <li class="team-social-link"><a href="https://www.facebook.com/">Facebook</a></li>
             <li class="team-social-link"><a href="https://www.instagram.com/">Instagram</a></li>
             <li class="team-social-link"><a href="https://twitter.com/">Twitter</a></li>
             <li class="team-social-link"><a href="https://dribbble.com/">Dribbble</a></li>
@@ -133,10 +118,5 @@
         </div>
     </div>
 </div>
-
-
-
-
-
 
 <% include ./partials/footer.ejs %>

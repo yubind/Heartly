@@ -1,6 +1,8 @@
 $primary-color: #9b92fb;
 $secondary-color: #fff;
 $tertiary-color: #a3a3a3;
+$light-background: #f9f9f9;
+$dark-background: #1f1f1f;
 $primary-overlay: rgba(darken($primary-color, 60%), 0.5);
 $black-overlay: rgba(darken(#f4f4f4, 60%), 0.5);
 $background-opacity: 0.9;
@@ -17,6 +19,7 @@ $bold: 700;
 
 @mixin flexCenter {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
@@ -25,34 +28,17 @@ $bold: 700;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-
-//media query mixins
-@mixin mediaSm {
-    @media screen and (max-width: 500px) {
-        @content;
-    }
+@mixin readMore {
+    padding: .8rem 2.5rem;
+    border: 2px solid $secondary-color;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: $bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    outline: none;
 }
-
-
-@mixin mediaMd {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
-}
-
-
-@mixin mediaLg {
-    @media screen and (min-width: 769px) and (max-width: 1170px) {
-        @content;
-    }
-}
-
-@mixin mediaXl {
-    @media screen and (min-width: 1171px) {
-        @content;
-    }
-}
-
 
 
 
@@ -76,4 +62,43 @@ $bold: 700;
 
 .fadeinup {
     animation: 1.5s forwards fadeInUp;
+}
+
+
+
+
+//media query mixins
+@mixin mediaSm {
+    @media only screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+
+@mixin mediaMd {
+    @media only screen and (max-width: 768px) and (min-width: 501px) {
+        @content;
+    }
+}
+
+
+@mixin mediaLg {
+    @media only screen and (max-width: 1170px) and (min-width: 769px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media only screen and (min-width: 1171px) {
+        @content;
+    }
+}
+
+
+
+//hover query
+@mixin mediaHover {
+    @media (hover: hover) {
+        @content;
+    }
 }

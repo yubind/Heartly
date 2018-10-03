@@ -1,0 +1,89 @@
+<% include ./partials/header.ejs%>
+
+
+<div class="contact-top-bg" style="background-image: url(/img/contact-bg.jpg);">
+    <header class="menu">
+         <h3 class="menu-brand"><a href="/">Heartly</a></h3>
+         <label for="toggle">&#9776;</label>
+         <input type="checkbox" id="toggle"/>
+         <ul class="menu-nav">
+             <li class="nav-item">
+                 <a href="/" class="nav-link">
+                    Home
+                 </a>
+             </li>
+             <li class="nav-item">
+                 <a href="/about" class="nav-link">
+                    About
+                 </a>
+             </li>
+             <li class="nav-item">
+                 <a href="/contact" class="nav-link">
+                    Contact
+                 </a>
+             </li>
+         </ul>
+    </header>
+    
+    <div class="contact-top-content">
+        <h1 class="fadeinup-animate">Let's make things happen!</h1>
+    </div>
+</div>
+
+<div class="contact-direction">
+    <a href="https://goo.gl/maps/TeKWmJpaf8S2" class="direction-img-link">
+        <img class="direction-img" src="/img/direction-img.jpg"/>
+        <div class="direction-img-text">
+            <h3 class="direction-img-text-1">Downtown<br>
+                                             Portland, OR<br>
+                                             97205
+            </h3>
+            <p class="direction-img-text-2">team@heartly.com</p>
+            <h3 class="direction-img-text-3">Get directions</h3>
+        </div>
+    </a>
+    <div class="direction-content">
+        <h3 class="fadeinup-animate">Always<br>
+            Be<br>
+            Collaborating.
+        </h3>
+        <p class="fadeinup-animate">
+            Located in beautiful Portland, OR, our team is passionate about showcasing the power of a single act of kindness. We have seen both locally and globally how one good deed can be a catalyst for far reaching change.
+            
+            This organization was created to cultivate such good will, and we would love to partner with you and your company to push this initiative forward.
+        </p>
+    </div>
+</div>
+
+<div class="contact-input">
+    <form class="input-form">
+        <div class="input-description">
+            <h5 class="input-sm-header">partnership</h5>
+            <h3 class="input-lg-header">Want to work with us?</h3>
+            <p class="input-p">You will have the unique opportunity to create, brand, and associate a cause with a campaign of kindness. If you’d like to know more, please feel free to reach out to us using the form below; we’d love to hear from you!</p>
+        </div>
+        <div class="input-group">
+            <div class="input-container">
+                <input id="name" class="input" type="text" name="your-name">
+                <label for="name" class="label">Name</label>
+            </div>
+            <div class="input-container">
+                <input id="email" class="input" type="text" name="e-mail">
+                <label for="email" class="label">E-mail</label>
+            </div>
+            <div class="input-container">
+                <input id="subject" class="input" type="text" name="subject">
+                <label for="subject" class="label">Subject</label>
+            </div>
+            <div class="input-container">
+                <input id="message" class="input lg" type="text" name="your-message">
+                <label for="message" class="label lg">Message</label>
+            </div>
+        </div>
+        <button class="submit">Send</button>
+    </form>
+</div>
+
+
+
+<% include ./partials/footer.ejs %>

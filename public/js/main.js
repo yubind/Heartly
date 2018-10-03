@@ -21,15 +21,15 @@ $( document ).ready(function() {
     dots: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1070,
         settings: {
           centerMode: true,
           centerPadding: '20px',
-          slidesToShow: 1
+          slidesToShow: 2
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 720,
         settings: {
           centerMode: true,
           centerPadding: '20px',
@@ -80,10 +80,10 @@ $( document ).ready(function() {
       }
     });
    });
+   
+   
+   
+   //menu
   
-  
-  
-  
-  
-  
+    
 });
