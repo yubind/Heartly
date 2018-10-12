@@ -93,12 +93,3 @@ $bold: 700;
         @content;
     }
 }
-
-
-
-//hover query
-@mixin mediaHover {
-    @media (hover: hover) {
-        @content;
-    }
-}

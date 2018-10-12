@@ -1,10 +1,5 @@
 @import 'config';
 
-//widescreen
-@include mediaXl {
-
-}
-
 
 //desktop & laptop
 @include mediaLg {
@@ -12,11 +7,11 @@ body {
     
     .top {
         &-header {
-            font-size: 3em;
+            font-size: 3rem;
         }
         
         &-sm-header {
-            font-size: 1.5em;
+            font-size: 1.5rem;
         }
     }
     
@@ -41,7 +36,7 @@ body {
     
     .about-top-content {
         h1 {
-            font-size: 3em;
+            font-size: 3rem;
         }
     }
   }
@@ -54,11 +49,11 @@ body {
 body {
     .top {
         &-header {
-            font-size: 2em;
+            font-size: 2rem;
         }
         
         &-sm-header {
-            font-size: 1em;
+            font-size: 1rem;
         }
     }
     
@@ -104,7 +99,7 @@ body {
     
     .about-top-content {
         h1 {
-            font-size: 3em;
+            font-size: 3rem;
         }
     }
     
@@ -156,7 +151,7 @@ body {
                 height: 3rem;
                 line-height: 3rem;
                 display: block;
-                font-size: 1.2em;
+                font-size: 1.2rem;
                 text-align: center;
                 border-bottom: 1px solid $tertiary-color;
             }
@@ -166,11 +161,11 @@ body {
  //index page
     .top {
         &-header {
-            font-size: 1.7em;
+            font-size: 1.7rem;
         }
         
         &-sm-header {
-            font-size: 1em;
+            font-size: 1rem;
         }
         
         &-btn-container {
@@ -227,7 +222,7 @@ body {
         
         .about-top-content {
             h1 {
-                font-size: 2em;
+                font-size: 2rem;
             }
             
             h3 {

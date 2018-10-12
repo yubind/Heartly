@@ -33,6 +33,10 @@
         .nav-item {
             margin: 0 .5rem;
             display: inline-block;
+            
+            &:hover {
+                color: $tertiary-color;
+            }
          }
     }
 }

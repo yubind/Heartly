@@ -18,29 +18,29 @@ html {
  }
 
 body {
-    font: $normal 1em $open-sans;
+    font: $normal 1rem $open-sans;
     line-height: 1.3;
     display: none;
  }
 
 h1 {
-    font-size: 4.5em;
+    font-size: 4.5rem;
     font-weight: $bold;
     font-family: $hind;
  }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-family: $hind;
  }
 
 h3 {
-    font-size: 2em;
+    font-size: 2rem;
     font-family: $hind;
  }
 
 h4 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-family: $hind;
  }
  
@@ -55,7 +55,7 @@ hr {
         height: 1px;
         border: 0;
         border-top: 1px solid #d3d3d3;
-        margin: 1em 0;
+        margin: 1rem 0;
         padding: 0; 
  }
     
@@ -112,7 +112,7 @@ ul, li {
         margin: 2rem 0 6rem 0;
         font-family: $montserrat;
         font-weight: $bold;
-        font-size: .7em;
+        font-size: .7rem;
         text-transform: uppercase;
         letter-spacing: 2px;
         
@@ -122,6 +122,12 @@ ul, li {
             padding: .8rem 1.5rem;
             border-radius: 35px;
             @include easeOut;
+            
+            &:hover {
+                cursor: pointer;
+                background: $primary-color;
+                color: $secondary-color;
+            }
         }
     }
 }
@@ -211,7 +217,7 @@ ul, li {
                 .how-sm-header {
                     font-size: 1.4em;
                     font-weight: $normal;
-                    margin-bottom: .3em;
+                    margin-bottom: .3rem;
                 }
                 
                 .how-sm-p {
@@ -221,7 +227,6 @@ ul, li {
     }
     
 }
-
 
 
 .home-img-links {
@@ -263,6 +268,23 @@ ul, li {
                     padding: 5rem 4rem;
                 }
             }
+            
+            &:hover {
+                box-shadow: 1px 29px 67px -21px rgba(0,0,0,0.75);
+                
+                .home-img-link {
+            
+                    .home-img {
+                        transform: scale(1.2);
+                        filter: brightness(50%);
+                    }
+                    
+                    .home-img-text {
+                        opacity: 1;
+                        border: 10px solid $secondary-color;
+                    }
+                }
+            }
         }
 }
 
@@ -301,7 +323,7 @@ ul, li {
                     border-left: solid 25px transparent;
                     border-right: solid 25px transparent;
                 }
-            }
+             }
           }
           
           img {
@@ -316,7 +338,7 @@ ul, li {
             padding: 2.5rem 2.5rem 2.5rem 5.5rem;
             border-radius: 10px;
             display: block;
-            font-size: 1em;
+            font-size: 1rem;
             letter-spacing: 0.5;
             text-align: left;
             outline: 0;
@@ -324,7 +346,7 @@ ul, li {
           
             &:before {
                 content: open-quote;
-                font-size: 7em;
+                font-size: 7rem;
                 color: $primary-overlay;
                 opacity: 0.4;
                 position: absolute;
@@ -425,18 +447,17 @@ ul, li {
 
     
     .bottom-bg-overlay {
+        @include flexCenter;
         width: 100%;
         height: 28rem;
         background: $black-overlay;
         z-index: 1;
-        @include flexCenter;
-        
         
         .bottom-contact {
+            @include flexCenter;
             padding: 1rem;
             color: $secondary-color;
             text-align: center;
-            @include flexCenter;
             flex-direction: column;
             
             h3 {
@@ -447,9 +468,9 @@ ul, li {
                 margin-top: 25px;
                 
                 &:hover {
+                    @include easeOut;
                     border: 2px solid $primary-color;
                     background-color: $primary-color;
-                    @include easeOut;
                 }
             }
         }
@@ -489,18 +510,17 @@ ul, li {
 
 //about page sticky nav
 #about-nav {
-  height: 4.5rem;  
-  background-color: #111;
-  width: 100%;
-  z-index: 1;
-  @include flexCenter;
+    @include flexCenter;
+    height: 4.5rem;  
+    background-color: #111;
+    width: 100%;
+    z-index: 1;
   
       li {
-        margin: .8rem;
-        color: $tertiary-color;
-        font-family: $varela-round;
-        @include easeOut;
-        
+          @include easeOut;
+          margin: .8rem;
+          color: $tertiary-color;
+          font-family: $varela-round;
     
          &:hover {
              color: $secondary-color;
@@ -542,9 +562,9 @@ ul, li {
             padding: 40px;
 
             h2 {
+                @include textShadow;
                 font-weight: $normal;
                 margin-bottom: 1rem;
-                @include textShadow;
             }
         }
     }
@@ -584,13 +604,14 @@ ul, li {
             background-color: #000;
             
             img {
-              width: 350px;
-              height: 350px;
-              position: relative;
-              @include easeOut;
+                @include easeOut;
+                width: 350px;
+                height: 350px;
+                position: relative;
             }
             
             .team-img-caption-container {
+                @include easeOut;
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -599,7 +620,6 @@ ul, li {
                 color: $secondary-color;
                 line-height: .5;
                 opacity: 0;
-                @include easeOut;
             }
             
             
@@ -660,8 +680,8 @@ ul, li {
             }
             
             &-link {
-                color: $primary-color;
                 @include easeOut;
+                color: $primary-color;
                 
                 &:hover {
                     color: $tertiary-color;
@@ -720,12 +740,12 @@ ul, li {
         flex: 50%;
         
         .direction-img {
+            @include easeOut;
             width: 100%;
             height: 100%;
             padding: 0;
             margin: 0;
             filter: grayscale(50%);
-            @include easeOut;
         }
         
         .direction-img-text {
@@ -796,7 +816,7 @@ ul, li {
                         border-bottom: 2px solid $primary-color;
                         
                         & + .label {
-                            font-size: .8em;
+                            font-size: .8rem;
                             color: $primary-color;
                         }
                     }
@@ -861,11 +881,11 @@ footer {
         .footer-content {
             width: 20%;
             margin: 0 1rem;
-            font-size: 1em;
+            font-size: 1rem;
             
             a {
-                color: $tertiary-color;
                 @include easeOut;
+                color: $tertiary-color;
                 
                 &:hover {
                     color: $primary-color;
@@ -889,7 +909,7 @@ footer {
                 
                 span {
                     margin-bottom: .5rem;
-                    font-size: .8em;
+                    font-size: .8rem;
                 }
             }
             
@@ -904,7 +924,7 @@ footer {
                     a {
                         color: $secondary-color;
                         background-color: $dark-background;
-                        font-size: .7em;
+                        font-size: .7rem;
                         margin: .1rem 0 0 .1rem;
                         padding: .5rem;
                         
@@ -935,15 +955,15 @@ footer {
         height: 4rem;
         padding: 0 4rem;
         background-color: #1f1f1f;
-        font-size: .7em;
+        font-size: .7rem;
         color: $tertiary-color;
         
         .footer-icons {
             font-size: 1rem;
             
             a {
-                margin-left: .5rem;
                 @include easeOut;
+                margin-left: .5rem;
                 
                 &:hover {
                     color: $primary-color;
@@ -952,45 +972,4 @@ footer {
             
         }
     }
-}
-
-
-
-@include mediaHover {
-    .menu {
-        .menu-nav {
-            .nav-item {
-                .nav-link:hover {
-                    color: $tertiary-color;
-                }
-            }
-        }
-    }
-    
-    .top-btn:hover {
-        cursor: pointer;
-        background: $primary-color;
-        color: $secondary-color;
-    }
-    
-    .home-img-container:hover {
-        box-shadow: 1px 29px 67px -21px rgba(0,0,0,0.75);
-        
-        .home-img-link {
-            
-            .home-img {
-                transform: scale(1.2);
-                filter: brightness(50%);
-            }
-            
-            .home-img-text {
-                opacity: 1;
-                border: 10px solid $secondary-color;
-            }
-        }
-    }
-    
-    
-    
-    
 }

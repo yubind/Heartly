@@ -1,7 +1,5 @@
 const express = require('express'),
-        app = express(),
-        request = require("request"),
-        NewsAPI = require('newsapi');
+        app = express();
    
 
 app.use(express.static(__dirname + "/public"));
@@ -24,12 +22,6 @@ app.get("/contact", function(req, res) {
 
 
 
-
-
 app.listen(process.env.PORT, process.env.IP, function() {
     console.log("Server has started");
 });
-
-
-
-//79ed8eb1271f451c86854ae59c2c0aba newsapikey
